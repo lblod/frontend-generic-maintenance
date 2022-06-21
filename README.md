@@ -1,4 +1,4 @@
-# generic-maintenance-page
+# frontend-generic-maintenance
 
 frontend for the generic maintenance stack. see https://github.com/lblod/app-generic-maintenance
 

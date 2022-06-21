@@ -2,7 +2,7 @@
 
 module.exports = function (environment) {
   let ENV = {
-    modulePrefix: 'generic-maintenance-page',
+    modulePrefix: 'frontend-generic-maintenance',
     environment,
     rootURL: '/',
     locationType: 'auto',
