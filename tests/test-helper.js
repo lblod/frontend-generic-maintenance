@@ -1,5 +1,5 @@
-import Application from 'frontend-maintenance/app';
-import config from 'frontend-maintenance/config/environment';
+import Application from 'generic-maintenance-page/app';
+import config from 'generic-maintenance-page/config/environment';
 import * as QUnit from 'qunit';
 import { setApplication } from '@ember/test-helpers';
 import { setup } from 'qunit-dom';

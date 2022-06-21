@@ -1,9 +1,16 @@
-FROM nginx:1.15
+FROM madnificent/ember:3.28.5 as builder
+
 LABEL maintainer="info@redpencil.io"
 
-RUN rm /etc/nginx/conf.d/default.conf \
-    && ln -s /usr/share/nginx/html /app
+ARG SHOW_APP_VERSION_HASH=false
 
-COPY nginx.conf /etc/nginx/conf.d/app.conf
-COPY index.html /app
-COPY img /app/img
+WORKDIR /app
+COPY package.json .
+COPY package-lock.json .
+RUN npm ci
+COPY . .
+RUN ember build -prod
+
+
+FROM semtech/static-file-service:0.2.0
+COPY --from=builder /app/dist /data

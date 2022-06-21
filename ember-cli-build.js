@@ -5,6 +5,25 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
     // Add options here
+    sassOptions: {
+      sourceMapEmbed: true,
+      includePaths: [
+        'node_modules/@appuniversum/appuniversum',
+        'node_modules/@appuniversum/ember-appuniversum/app/styles',
+      ],
+    },
+    autoprefixer: {
+      enabled: true,
+      cascade: true,
+      sourcemap: true,
+    },
+    babel: {
+      plugins: [require.resolve('ember-auto-import/babel-plugin')],
+    },
+    // Disable chunk css fingerprinting until the config is included in ember-auto-import: https://github.com/ef4/ember-auto-import/pull/496
+    fingerprint: {
+      exclude: ['assets/chunk.*.css'],
+    },
   });
 
   // Use `app.import` to add additional libraries to the generated

@@ -2,12 +2,14 @@
 
 module.exports = function (environment) {
   let ENV = {
-    modulePrefix: 'frontend-maintenance',
+    modulePrefix: 'generic-maintenance-page',
     environment,
     rootURL: '/',
     locationType: 'auto',
     maintenance: {
-      message: "{{MAINTENANCE_MESSAGE}}"
+      message: "Het OrganisatiePortaal is momenteel niet beschikbaar wegens technisch onderhoud.",
+      appTitle: "OrganisatiePortaal",
+      appUrl: "organisaties.abb.vlaanderen.be"
     },
     EmberENV: {
       FEATURES: {
@@ -24,6 +26,9 @@ module.exports = function (environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
     },
+
+    appName: 'Maintenance',
+    contactEmail: '{{CONTACT_EMAIL}}',
   };
 
   if (environment === 'development') {
