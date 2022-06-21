@@ -7,9 +7,9 @@ module.exports = function (environment) {
     rootURL: '/',
     locationType: 'auto',
     maintenance: {
-      message: "Het OrganisatiePortaal is momenteel niet beschikbaar wegens technisch onderhoud.",
-      appTitle: "OrganisatiePortaal",
-      appUrl: "organisaties.abb.vlaanderen.be"
+      message: "{{MAINTENANCE_MESSAGE}}",
+      appTitle: "{{MAINTENANCE_APP_TITLE}}",
+      appUrl: "{{MAINTENANCE_APP_URL}}"
     },
     EmberENV: {
       FEATURES: {
@@ -27,8 +27,6 @@ module.exports = function (environment) {
       // when it is created
     },
 
-    appName: 'Maintenance',
-    contactEmail: '{{CONTACT_EMAIL}}',
   };
 
   if (environment === 'development') {
