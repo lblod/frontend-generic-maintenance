@@ -7,7 +7,7 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function () {
-  this.route('contact', { path: '/contact' });
+  this.route('contact');
   this.route('legal', { path: '/legaal' }, function () {
     this.route('disclaimer');
     this.route('cookiestatement', { path: '/cookieverklaring' });
@@ -20,5 +20,4 @@ Router.map(function () {
   this.route('redirect', {
     path: '/*wildcard',
   });
-
 });
