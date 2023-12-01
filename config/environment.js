@@ -7,9 +7,9 @@ module.exports = function (environment) {
     rootURL: '/',
     locationType: 'auto',
     maintenance: {
-      message: "{{MAINTENANCE_MESSAGE}}",
-      appTitle: "{{MAINTENANCE_APP_TITLE}}",
-      appUrl: "{{MAINTENANCE_APP_URL}}"
+      message: '{{MAINTENANCE_MESSAGE}}',
+      appTitle: '{{MAINTENANCE_APP_TITLE}}',
+      appUrl: '{{MAINTENANCE_APP_URL}}',
     },
     EmberENV: {
       FEATURES: {
@@ -26,7 +26,6 @@ module.exports = function (environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
     },
-
   };
 
   if (environment === 'development') {

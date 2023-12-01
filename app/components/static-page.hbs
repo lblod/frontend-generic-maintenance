@@ -1,6 +1,6 @@
 <AuContentHeader
   @titlePartOne="Vlaanderen"
-  @titlePartTwo={{(concat "is het " (config "maintenance.appTitle"))}}
+  @titlePartTwo="is lokaal bestuur"
 >
   <img
     sizes="50vw"
@@ -10,8 +10,8 @@
     role="presentation"
   />
 </AuContentHeader>
-<div style="min-height:63vh">
-{{yield}}
+<div class="flex-grow">
+  {{yield}}
 </div>
 <AuMainFooter>
   <AuHeading @level="3" @skin="4">

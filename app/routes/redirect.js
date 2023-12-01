@@ -6,6 +6,5 @@ export default class RedirectRoute extends Route {
 
   async beforeModel() {
     return this.router.replaceWith('index');
-
   }
 }
